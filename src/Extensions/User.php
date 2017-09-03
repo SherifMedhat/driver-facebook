@@ -31,7 +31,7 @@ class User extends BotManUser implements UserInterface
      */
     public function getProfilePic()
     {
-        return $this->user_info['profile_pic'] ?? null;
+        return $this->user_info['profile_pic'] ?: null;
     }
 
     /**
@@ -39,7 +39,7 @@ class User extends BotManUser implements UserInterface
      */
     public function getLocale()
     {
-        return $this->user_info['locale'] ?? null;
+        return $this->user_info['locale'] ?: null;
     }
 
     /**
@@ -47,7 +47,7 @@ class User extends BotManUser implements UserInterface
      */
     public function getTimezone()
     {
-        return $this->user_info['timezone'] ?? null;
+        return $this->user_info['timezone'] ?: null;
     }
 
     /**
@@ -55,7 +55,7 @@ class User extends BotManUser implements UserInterface
      */
     public function getGender()
     {
-        return $this->user_info['gender'] ?? null;
+        return $this->user_info['gender'] ?: null;
     }
 
     /**
@@ -63,7 +63,7 @@ class User extends BotManUser implements UserInterface
      */
     public function getIsPaymentEnabled()
     {
-        return $this->user_info['is_payment_enabled'] ?? null;
+        return $this->user_info['is_payment_enabled'] ?: null;
     }
 
     /**
@@ -71,6 +71,6 @@ class User extends BotManUser implements UserInterface
      */
     public function getLastAdReferral()
     {
-        return $this->user_info['last_ad_referral'] ?? null;
+        return $this->user_info['last_ad_referral'] ?: null;
     }
 }

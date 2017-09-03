@@ -363,8 +363,8 @@ class FacebookDriver extends HttpDriver implements VerifiesService
         $this->throwExceptionIfResponseNotOk($userInfoData);
         $userInfo = json_decode($userInfoData->getContent(), true);
 
-        $firstName = $userInfo['first_name'] ?? null;
-        $lastName = $userInfo['last_name'] ?? null;
+        $firstName = $userInfo['first_name'] ?: null;
+        $lastName = $userInfo['last_name'] ?: null;
 
         return new User($matchingMessage->getSender(), $firstName, $lastName, null, $userInfo);
     }
